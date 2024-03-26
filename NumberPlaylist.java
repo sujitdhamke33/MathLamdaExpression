@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class NumberPlaylist {
 
@@ -48,9 +49,16 @@ public class NumberPlaylist {
         np.forEach(n ->{
             System.out.println("Number List element by using for Each is : "+n);
         });
-
+        // to check the double
         Function<Integer, Double> convertTodouble= n -> n.doubleValue();
         np.forEach(n -> System.out.println("Value after converting is : "+convertTodouble.apply(n)));
+
+        // for even numbers
+
+        Predicate<Integer> isEven = n -> n %2 == 0;
+        np.forEach(n->{
+            System.out.println("Even numbers are : " + n + isEven.test(n));
+        });
     }
 
 }
