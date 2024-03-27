@@ -74,5 +74,10 @@ public class NumberPlaylist {
 
         List<Double> doubleList = np.stream().map(doubleConversion).collect(Collectors.toList());
         System.out.println("Printing the result : " + doubleList);
+
+        // filtering the even numbers
+
+        List<Integer> evenNumbersCollecter = np.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
+        System.out.println("Printing the even numbers : " + evenNumbersCollecter);
     }
 }
