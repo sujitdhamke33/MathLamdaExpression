@@ -87,5 +87,13 @@ public class NumberPlaylist {
                 .findFirst()
                 .orElse(null);
         System.out.println("First Even Number is : "+firstEvenFind);
+
+        //Min and max find
+
+        Integer min = np.stream().filter(isEven).min((a,b)->(a-b)).orElse(null);
+        System.out.println("Min is : " + min);
+
+        Integer max = np.stream().filter(isEven).max((a,b)->(a-b)).orElse(null);
+        System.out.println("Min is : " + max);
     }
 }
