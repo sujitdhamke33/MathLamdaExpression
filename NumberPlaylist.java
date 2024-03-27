@@ -95,5 +95,11 @@ public class NumberPlaylist {
 
         Integer max = np.stream().filter(isEven).max((a,b)->(a-b)).orElse(null);
         System.out.println("Min is : " + max);
+
+        // average sum
+        Integer sum = np.stream().reduce(0,Integer::sum);
+        long count = np.stream().count();
+        System.out.println("Average is : " + sum/count);
+        
     }
 }
