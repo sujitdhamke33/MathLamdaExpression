@@ -79,5 +79,13 @@ public class NumberPlaylist {
 
         List<Integer> evenNumbersCollecter = np.stream().filter(n -> n % 2 == 0).collect(Collectors.toList());
         System.out.println("Printing the even numbers : " + evenNumbersCollecter);
+
+        // peak and show first even numbers
+        
+        Integer firstEvenFind =np.stream()
+                .filter(isEven)
+                .findFirst()
+                .orElse(null);
+        System.out.println("First Even Number is : "+firstEvenFind);
     }
 }
