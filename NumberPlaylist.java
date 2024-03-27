@@ -100,6 +100,12 @@ public class NumberPlaylist {
         Integer sum = np.stream().reduce(0,Integer::sum);
         long count = np.stream().count();
         System.out.println("Average is : " + sum/count);
-        
+
+        //all match or even match
+
+        boolean allMatch = np.stream().allMatch(isEven);
+        boolean anyMatch = np.stream().anyMatch(isEven);
+        System.out.println("All elements are even :"+allMatch);
+        System.out.println("At least one element is even in list : "+anyMatch);
     }
 }
