@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class NumberPlaylist {
 
@@ -69,6 +70,9 @@ public class NumberPlaylist {
         Function<Integer,Double> doubleConversion = n-> n.doubleValue();
         np.forEach(n-> System.out.println("Value of " + n + " After doouble conversion is " + doubleConversion.apply(n)));
 
+        // using Collector to store
 
+        List<Double> doubleList = np.stream().map(doubleConversion).collect(Collectors.toList());
+        System.out.println("Printing the result : " + doubleList);
     }
 }
