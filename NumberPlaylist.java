@@ -65,6 +65,10 @@ public class NumberPlaylist {
         np.stream().forEach(n->{
             System.out.println("Itereating the value here : " + n);
         });
-    }
 
+        Function<Integer,Double> doubleConversion = n-> n.doubleValue();
+        np.forEach(n-> System.out.println("Value of " + n + " After doouble conversion is " + doubleConversion.apply(n)));
+
+
+    }
 }
