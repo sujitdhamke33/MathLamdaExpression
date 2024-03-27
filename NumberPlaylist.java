@@ -59,6 +59,12 @@ public class NumberPlaylist {
         np.forEach(n->{
             System.out.println("Even numbers are : " + n + isEven.test(n));
         });
+
+        // for each iterating
+
+        np.stream().forEach(n->{
+            System.out.println("Itereating the value here : " + n);
+        });
     }
 
 }
