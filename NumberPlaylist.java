@@ -107,5 +107,10 @@ public class NumberPlaylist {
         boolean anyMatch = np.stream().anyMatch(isEven);
         System.out.println("All elements are even :"+allMatch);
         System.out.println("At least one element is even in list : "+anyMatch);
+
+        // sort the number in ascending order
+
+        List<Integer> sortBynumber = np.stream().sorted().collect(Collectors.toList());
+        System.out.println("Sorted Array List is : "+sortBynumber);
     }
 }
